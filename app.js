@@ -30,6 +30,18 @@ app.get("/view",(req,res)=>{
     res.send("view data")
 })
 
+app.post("/display", async(req,res)=>{
+ let data=await rModel.find(req.body)
+    res.send(data)
+})
+
+app.post("/update" ,async(req,res)=>{
+    let data=await rModel.find(req.body)
+       res.send(data)
+   })
+
+
+
 
 
 app.listen(2500)
